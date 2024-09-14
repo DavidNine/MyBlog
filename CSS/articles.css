@@ -1,0 +1,72 @@
+
+
+/* 基本頁面佈局 */
+.content-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* 超連結樣式 */
+a {
+  color: #00ff99;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* 標題樣式 */
+h1, h2 {
+  color: #00ff99;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+/* 引述區塊樣式 */
+blockquote {
+  background-color: #1a1a1a;
+  padding: 15px;
+  border-left: 5px solid #5de4c7;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+/* 代碼區塊樣式 */
+pre {
+  background-color: #333;
+  padding: 10px;
+  border-radius: 5px;
+  overflow-x: auto;
+  margin-bottom: 20px;
+}
+
+code {
+  color: #ffffff;
+}
+
+/* 圖片樣式 */
+picture img {
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+/* 表格區塊 */
+.test {
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+

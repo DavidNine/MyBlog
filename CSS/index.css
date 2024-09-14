@@ -1,0 +1,107 @@
+/* 英雄區域 */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: url('../Image/cloud-storage-background-remixed-from-public-domain-by-nasa.jpg') no-repeat center center/cover; /* 可以放置背景圖片 */
+  color: #ffffff;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+
+
+/* 更新紀錄區塊樣式 */
+.updates {
+  padding: 30px 20px;
+  background-color: #1a1a1a;
+  margin-top: 40px;
+  border-left: 4px solid #00ff00;
+}
+
+.updates h1 {
+  font-size: 28px;
+  color: #00ff00;
+  margin-bottom: 20px;
+}
+
+.updates ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.updates ul li {
+  font-size: 18px;
+  color: #ffffff;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.updates ul li strong {
+  color: #ff00ff;
+}
+
+
+
+
+
+
+/* 部落格預覽 */
+.blog-preview {
+  padding: 50px 20px;
+  background-color: #121212;
+}
+
+.blog-preview h2 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.articles {
+  display: flex;
+  flex-wrap: wrap; /* 允許換行 */
+  gap: 20px; /* 控制每個 article 之間的間距 */
+}
+
+article {
+  background-color: #1a1a1a;
+  padding: 20px;
+  border: 1px solid #00ff00;
+  flex: 1 1 calc(33.333% - 40px); /* 每個 article 寬度為容器的三分之一 */
+  box-sizing: border-box; /* 讓 padding 不影響寬度 */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+article:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+}
+
+
+article h3 {
+  color: #00ff00;
+  margin-bottom: 15px;
+}
+
+article p {
+  color: #cccccc;
+}
+
+article a {
+  color: #ff00ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+article a:hover {
+  text-decoration: underline;
+}
+

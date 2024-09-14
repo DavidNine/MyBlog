@@ -1,0 +1,22 @@
+/* Reset 一些預設樣式 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Consolas', 'Courier New', monospace;
+  background-color: #0d0d0d;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+
+/* 頁尾 */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #1a1a1a;
+  color: #cccccc;
+}
