@@ -3,7 +3,7 @@
 歡迎來到我的部落格
 在這裡會記錄我工作以及生活上所學習到的相關技術
 
-### **進入我的部落格 >> [前往部落格首頁](https://davidnine.github.io/Blog/home.html)**
+### **進入我的部落格 >> [前往部落格首頁](https://davidnine.github.io/MyBlog/home.html)**
 
 * 更新紀錄：
 
