@@ -1,21 +1,37 @@
-/* 英雄區域 */
+/* 英雄區域調整 */
 .hero {
+  padding: 50px 10px;
+  background: url('../Image/cloud-storage-background-remixed-from-public-domain-by-nasa.jpg') no-repeat center center/cover;
   text-align: center;
-  padding: 100px 20px;
-  background: url('../Image/cloud-storage-background-remixed-from-public-domain-by-nasa.jpg') no-repeat center center/cover; /* 可以放置背景圖片 */
-  color: #ffffff;
 }
 
 .hero h1 {
-  font-size: 48px;
-  margin-bottom: 20px;
+  font-size: 36px;
 }
 
 .hero p {
-  font-size: 20px;
-  margin-bottom: 40px;
+  font-size: 16px;
 }
 
+@media (min-width: 768px) {
+  .hero h1 {
+      font-size: 48px;
+  }
+
+  .hero p {
+      font-size: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero h1 {
+      font-size: 60px;
+  }
+
+  .hero p {
+      font-size: 24px;
+  }
+}
 
 
 /* 更新紀錄區塊樣式 */

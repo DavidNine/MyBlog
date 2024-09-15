@@ -9,11 +9,31 @@
   margin-bottom: 40px;
 }
 
+/* Mobile-first Design */
 .articles {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
+
+/* Desktop Design */
+@media (min-width: 768px) {
+  .articles {
+      flex-direction: row;
+      flex-wrap: wrap;
+  }
+
+  article {
+      flex: 1 1 calc(50% - 20px); /* 在平板裝置上，兩篇文章一行 */
+  }
+}
+
+@media (min-width: 1024px) {
+  article {
+      flex: 1 1 calc(33.333% - 20px); /* 桌面裝置上，三篇文章一行 */
+  }
+}
+
 
 article {
   background-color: #1a1a1a;
