@@ -32,18 +32,17 @@
                         Environment: Ubuntu 22.04 <br>
                     </p>
                 </blockquote>
-                <h2>1. Getting-start</h2>
-                <blockquote>
-                    <p>First, we need to build essential environment for developing linux Driver, build-essential will install tools that mandatory for compiling program such as gcc, make etc.</p>
-                    <p>$(uname -r) will get your kernel version</p>
-                    <pre><code>$sudo apt-get install build-essential linux-headers-$(uname -r)</code></pre>
-                    <picture>
-                        <img src="../Image/Ariticle-Driver/uname_result.jpg" alt="uname command result">
-                        <p>uname result</p>
-                    </picture>
-                </blockquote>
-                <h2>2. Simple Driver !</h2>
-                <div class="test">
+                    <h2>1. Getting-start</h2>
+                    <blockquote>
+                        <p>First, we need to build essential environment for developing linux Driver, build-essential will install tools that mandatory for compiling program such as gcc, make etc.</p>
+                        <p>$(uname -r) will get your kernel version</p>
+                        <pre><code>$sudo apt-get install build-essential linux-headers-$(uname -r)</code></pre>
+                        <picture>
+                            <img src="../Image/Ariticle-Driver/uname_result.jpg" alt="uname command result">
+                            <p>uname result</p>
+                        </picture>
+                    </blockquote>
+                    <h2>2. Simple Driver !</h2>
                     <blockquote>
                         <pre><code>/* example.c */<br>#include &lt;linux/init.h&gt;<br>#include &lt;linux/module.h&gt;<br><br>MODULE_LICENSE("Dual BSD/GPL");<br>static int example_init(void) {<br>    printk("&lt;Sample&gt; Example: init\n");<br>    return 0;<br>}<br>static void example_exit(void) {<br>    printk("&lt;Sample&gt; Example: exit\n");<br>}<br>module_init(example_init);<br>module_exit(example_exit);</code></pre>
                         <p>$(printk) is like printf in kernel programing. If we need to debug, this will be useful, we can use $(sudo dmesg) to observe the result.</p>
@@ -82,8 +81,7 @@
                         <p>If there is any mistake<br>Please contact me at ninebro1211@gmail.com</p>
                     </blockquote>
                     <p>More linux driver info: <a href="https://sysprog21.github.io/lkmpg/">https://sysprog21.github.io/lkmpg/</a></p>
-                </div>
-                
+                </div>  
             </div>
         </main>
         
