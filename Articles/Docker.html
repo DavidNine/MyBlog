@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>NineBro's Blog</title>
+        <link rel="stylesheet" href="../CSS/main.css">
+        <link rel="stylesheet" href="../CSS/header.css">
+        <link rel="stylesheet" href="../CSS/articles.css">
+    </head>
+    <body>
+        <header>
+            <div class="logo">NineBro's Blog</div>
+            <nav>
+                <ul>
+                    <li><a href="../home.html">首頁</a></li>
+                    <li><a href="../blog.html">文章</a></li>
+                    <li><a href="#">關於我</a></li>
+                    <li><a href="#">聯絡我</a></li>
+                </ul>
+            </nav>
+        </header>
+
+    <main>
+        <div class="content-container">
+            <div class="content">
+                <h1>Docker及Container的使用 </h1>
+                <blockquote>
+                    <p>
+                        Date: 2024/07/03<br>
+                        Auth: Guanyan.Wang<br>
+                        Environment: Microsoft WSL2 - Ubuntu 22.04<br>
+                    </p>
+                </blockquote>
+                    <h2>0. 學到docker的契機</h2>
+                    <blockquote>
+                      <p>之所以會碰到docker這個東東，是因為一個隔壁team大佬分享的故事</p>
+                      <p>之前他們在進行某個案子的時候，因為每個人在進行開發時使用的環境都不一樣</p>
+                      <p>&emsp;* A同事用 <strong>Windows 10</strong></p>
+                      <p>&emsp;* B同事用 <strong>Linux</strong></p>
+                      <p>導致他們在進行整合時就需要解決一大堆相容性的問題，真的是一大堆，搞得大家都很不愉快 </p>
+                      <br>
+                      <p>Debug到快發瘋，誰會爽呢(╯‵□′)╯︵┴─┴</p>
+                      <br>
+                      <p>因此才會去接觸到Docker這個東東，來統一所有人的環境，避免掉這些不必要的麻煩，</p>
+                      <p>後來引進到部門內後，才讓我有這個契機去學習docker這個酷東西</p>
+                      <br>
+                      <p>另外docker也有相當多的應用！</p>
+                      <p>例如：使用docker建立自己的gitlab server並結合各個自製的container架構出嚴謹的CI/CD環境。</p>
+                    </blockquote>
+                    <h2>1. 什麼是 Container</h2>
+                    <blockquote>
+                        <p>容器(Container)是一種虛擬化的技術，用來封裝應用程式及其dependencies，確保在不同的環境上都能夠正確的運行</p>
+                        <p>容器與傳統的VM不同，它不需要整個作業系統，只需應用程式及其相關的library、設定檔和必要的執行環境。因此container非常的輕量，啟動速度非常快，資源開銷低。</p>
+                        <picture>
+                            <img src="../Image/Ariticle-Docker/Containerized_Applications.jpg" alt="uname command result">
+                            <p>container structure</p>
+                        </picture>
+                    </blockquote>
+                    <h2>2. Docker 的安裝</h2>
+                    <blockquote>
+                      <p>以在WSL2環境下運行，我們先安裝 <strong>Docker desktop</strong></p>
+                      <a href="https://www.docker.com/products/docker-desktop/">[點此前往安裝 Docker]</a>
+                      <p>安裝完成後先前往設定頁面將WSL2與Docker engine整合。</p>
+                      <p>成功開啟後就可以到WSL2的環境底下使用Docker command囉</p>
+                      <picture>
+                        <img src="../Image/Ariticle-Docker/DockerWSL2Engine.jpg" alt="uname command result">
+                        <p>Enable WSL2 Engine with docker</p>
+                      </picture>
+                      <picture>
+                        <img src="../Image/Ariticle-Docker/DockerWSL2Command.jpg" alt="uname command result">
+                        <p>Enable use docker command in WSL2 environment</p>
+                      </picture>
+                    </blockquote>
+                    <h2>3. 使用docker-compose建立container</h2>
+                    <blockquote>
+                    <p>Docker compose是docker中相當重要的command，docker會根據yml檔定義的內容建立container<br><br></p>
+                    <p>Docker-compose.yml:</p>
+<pre><code>services:
+  web:
+    container_name: fastAPI
+    build:
+      context: .
+      dockerfile: fastAPI_Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - /code/fastAPI/:/app
+</code></pre>
+                    <p>這個yaml檔定義了container的名字，對外對接的port number，建構image時所要用的檔案等訊息。</p>
+                    <p>接著只要在這個docker-compose.yml的目錄下輸入command:</p>
+                    <pre><code>docker-compose up -d</code></pre>
+                    <p>就會自動的創造image並製作一個符合docker-compose.yml定義的container</p>
+                    </blockquote>
+                </div>  
+            </div>
+        </main>
+        
+        <footer>
+            <p>&copy; 2024 NineBro's Blog. All rights reserved.</p>
+        </footer>
+    </body>
+    </html>
+    
