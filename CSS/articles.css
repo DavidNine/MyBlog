@@ -64,6 +64,7 @@ picture {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 20px 0px;
 }
 
 /* 圖片、代碼塊、文章樣式調整 */
@@ -78,6 +79,7 @@ pre {
   padding: 10px;
   border-radius: 5px;
   background-color: #333;
+  margin: 20px 0px;
 }
 
 @media (min-width: 768px) {
