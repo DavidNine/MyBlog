@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Ninebro's Blog</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: black;
+            color: #00ffea;
+            font-family: 'JetBrains Mono' 'Orbitron', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* 星空背景动画 */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 200%;
+            height: 200%;
+            background: url('Image/Galaxy-background.jpg') repeat;
+            background-size: cover;
+            animation: starfield 100s linear infinite;
+            z-index: -1;
+        }
+
+        @keyframes starfield {
+            from { transform: translate3d(0,0,0); }
+            to { transform: translate3d(-50%, -50%, 0); }
+        }
+
+        h1, h2 {
+            text-align: center;
+            margin-top: 50px;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #00fff6;
+            text-shadow: 0 0 10px #00fff6;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            color: #00b3a6;
+            text-shadow: 0 0 5px #00b3a6;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 1000px;
+            margin: 50px auto;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px #00ffea;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+        .section-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+        
+        .section-image img{
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+        }
+
+        .section-title {
+            font-size: 1.8em;
+            border-bottom: 2px solid #00ffea;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        p, li {
+            line-height: 1.6;
+            font-size: 1.2em;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li::before {
+            content: "✦";
+            color: #00ffea;
+            margin-right: 10px;
+        }
+
+        .contact a {
+            color: #00ffea;
+            text-decoration: none;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        /* 流星动画 */
+        .meteor {
+            position: fixed;
+            top: -200px;
+            left: 50%;
+            width: 3px;
+            height: 100px;
+            background: linear-gradient(180deg, rgba(255,255,255,1), rgba(255,255,255,0));
+            opacity: 0.7;
+            transform: rotate(45deg);
+            animation: meteor 5s linear infinite;
+        }
+        .page-content a {
+          color: #00ffea;
+          text-decoration: none;
+          font-weight: bold;
+        }
+
+        .page-content a:hover {
+          text-decoration: underline;
+        }
+        
+        @keyframes meteor {
+            0% {
+                transform: translate3d(0,0,0) rotate(45deg);
+                opacity: 0.7;
+            }
+            100% {
+                transform: translate3d(-800px,800px,0) rotate(45deg);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="meteor"></div>
+    <h2>歡迎來到我的部落格</h2>
+    <div class="container">
+        <div class="section">
+          <div class="section-image">
+            <img src="Image/about/G0012682.JPG" alt="">
+          </div>
+          <div class="section-title">關於我</div>
+          <p>一名努力學習的大學生，就讀於<strong>元智大學</strong>，主修資訊工程學系。</p>
+        </div>
+        <div class="section">
+            <div class="section-title">興趣愛好</div>
+            <ul>
+                <li><strong>學習新知</strong>：致力於學習新奇的事物。</li>
+                <li><strong>發揮想像</strong>：研發新奇的點子，並加以實現。</li>
+                <li><strong>熱愛程式</strong>：開發各式各樣不同的程式。</li>
+            </ul>
+        </div>
+        <div class="section">
+          <div class="section contact">
+            <div class="section-title">聯絡方式</div>
+            <p><strong>我的電子郵件</strong>：<a href="mailto:acut74569@gmail.com">acut74569@gmail.com</a>a</p>
+            <p><strong>我的 Github </strong>：<a href="https://github.com/DavidNine">https://github.com/DavidNine</a></p>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-content page-content">
+            <div class="section-title">瀏覽部落格</div>
+            <ul>
+              <li><a href="home.html">首頁</a></li>
+              <li><a href="blog.html">文章</a></li>
+              <li><a href="about.html">關於我</a></li>
+              <li><a href="#">聯絡我</a></li>
+            </ul>      
+          </div>
+        </div>
+      </div>
+</body>
+</html>
