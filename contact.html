@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me - NineBro's Blog</title>
+    <link rel="stylesheet" href="CSS/contact.css">
+    <link rel="stylesheet" href="CSS/index.css">
+    <link rel="stylesheet" href="CSS/main.css">
+    <link rel="stylesheet" href="CSS/header.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">NineBro's Blog</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="blog.html">文章</a></li>
+                <li><a href="about.html">關於我</a></li>
+                <li><a href="contact.html">聯絡我</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-section">
+            <h1>Contact Me</h1>
+            <p>If you have any questions, feel free to reach out!</p>
+            
+            <div class="contact-info">
+                <p><strong>Email:</strong> ninebro1211@gmail.com</p>
+                <p><strong>GitHub:</strong> <a href="https://github.com/DavidNine" target="_blank">github.com/DavidNine</a></p>
+            </div>
+
+            <div class="form-container">
+                <h2>Send me a message:</h2>
+                <form action="submit_form.php" method="POST">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                    
+                    <input type="submit" value="Send Message">
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>All rights reserved &copy; 2024 NineBro's Blog</p>
+    </footer>
+
+</body>
+</html>
